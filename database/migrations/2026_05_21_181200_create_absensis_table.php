@@ -16,6 +16,7 @@ return new class extends Migration {
             $table->foreignId('matakuliah_id')->constrained('matakuliahs')->onDelete('cascade');
             $table->date('tanggal');
             $table->enum('status', ['hadir', 'izin', 'sakit', 'alpha'])->default('hadir');
+            $table->string('keterangan')->nullable();
             $table->timestamps();
         });
     }
